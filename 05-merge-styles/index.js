@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { stdin, stdout } = process;
 
 const namePath = path.join(__dirname, 'styles');
 
