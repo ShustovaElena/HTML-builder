@@ -10,9 +10,7 @@ function readFileInFolder(namePath) {
             for (let i = 0; i < files.length; i++) {
                 let namePathInner = path.join(namePath, files[i].name);
                 
-                if (files[i].isDirectory()) {
-                    readFileInFolder(namePathInner);
-                    } else {
+                if (!(files[i].isDirectory())) {
                         let ext = path.extname(namePathInner);
                         let elem = path.basename(namePathInner, ext);
 

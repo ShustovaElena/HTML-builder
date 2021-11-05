@@ -7,7 +7,7 @@ const output = fs.createWriteStream(namePath);
 
 stdout.write('Введите данные:\n');
 process.on('exit', () => stdout.write('Ввод завершен!'));
-stdin.on('data', data => {
+stdin.on('data', (data, key) => {
     if (data.includes('exit')) {
         process.exit();
     }
